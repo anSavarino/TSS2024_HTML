@@ -8,7 +8,14 @@
 <body>
     <!-- Tutte le pagine web devono avere un titolo -->
     <h1>Hyper Text Markup Language</h1> <!-- usare sempre un solo h1-->
-    <h2>Elementi smeplici</h2> <!-- h2{Elementi semplici} +tab-->
+    <ul>
+        <li><span>Home</span></li>
+        <li><a href="./liste.html">Liste</a></li>
+    </ul>
+    <h2>Indice</h2>
+    <a href="#homer">Homer</a>
+    <a href="#sez_ancora">Sezione ancora</a>
+    <h2>Elementi semplici</h2> <!-- h2{Elementi semplici} +tab-->
     <!-- Mai saltare livelli di Heading -->
     <!-- Nn usare il grassetto su h1 h2 h3 -->
     <h3>Paragrafi</h3>  
@@ -25,7 +32,7 @@
     <!-- tag a scopo di presentazione i = em, b= bold (non utilizzatima non deprecati) -->
     <p>Il termine <i>web</i> specifica la <b>rete</b></p>
     <h3>Le citazioni</h3>
-    <!-- citazione in linea -->
+    <!-- citazione in linea, inline qunado non va a capo da solo -->
     <p>L'azienda XYZ opera al 100% di energie rinnovabili: <q>Così proteggiamo il pianeta</q></p>
     <!-- blockquote è un elemento di blocco citato e può avere una sua struttura 
     cite="" per riportare la fonte-->
@@ -42,7 +49,7 @@
     <!-- immagine con percorso assoluto -->
     <img src="https://images.ctfassets.net/swt2dsco9mfe/1qU2YMq2MSczf9KGme5gu7/a580e2f158f2c08faad3a9d4463af0bc/dnd-hub-logo.png" alt="logo di dnd">
     <hr>
-    <img src="./assets/img/homer-felice.gif" alt="Homer simpsons che salta felice">
+    <img src="./assets/img/homer-felice.gif" id="homer" alt="Homer simpsons che salta felice">
     <!-- pre i contenuti mantegono gli spazi che utilizzo -->
     <pre>
         &lt;!DOCTYPE html&gt;
@@ -51,5 +58,23 @@
             &lt;/head&gt;
         &lt;/html&gt;
     </pre>
+    <h3>Link</h3>
+    <!-- a = anchor -->
+    <p>
+        <!-- blank apre nuova scheda -->
+        <a href="https://www.google.com" target="_blank" title="Il link si apre in una nuova scheda/finestra">Link a Google</a><br>
+        <a href="mailto:angelosavarino@edu.immaginazioneelavoro.it">Scrivimi</a>
+        <a href="tel:366994455">Chiamami</a>
+        <a href="sms:366994455">Mandami un SMS</a><br>
+        <a href="./assets/doc/lez-I.pdf" target="_blank">Apri slide Prima Lezione</a>
+        <!-- download scarica il file -->
+        <a href="./assets/doc/lez-I.pdf" download="Prima Lezione HTML">Scarica slide Prima Lezione</a>
+        <br>
+        <a href="https://it.wikiquote.org/wiki/Proverbi_latini"><br>
+            <img src="./assets/img/emoji-angry-fill.svg" alt="">
+        </a><br>
+        <h3 id="sez_ancora">Ancora nel testo</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem cum corrupti cupiditate beatae laborum fugiat.</p>
+    </p>   
 </body>
 </html>
