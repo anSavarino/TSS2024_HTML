@@ -107,8 +107,6 @@
                 <td>Supervelocità</td>
                 <td>Supervelocità</td>
             </tr>
-            <tr></tr>
-            <tr></tr>
         </table>
     </div>
 
@@ -118,48 +116,41 @@
     <table>
         <caption>Articoli venduti nel 2016</caption>
         <tr>
-            <td></td>
-            <td></td>
-            <td>Vestiti</td>
-            <td></td>
-            <td>Accessori</td>
-            <td></td>
+            <td rowspan="2" colspan="2"></td>
+            <th colspan="2" scope="colgroup">Vestiti</th> <!--uso colgroup perchè ho già colspan-->
+            <th colspan="2" scope="colgroup">Accessori</th>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
-            <td>Pantaloni</td>
-            <td>Gonne</td>
-            <td>Bracciali</td>
-            <td>Anelli</td>
+            <th scope="col">Pantaloni</th>
+            <th scope="col">Gonne</th>
+            <th scope="col">Bracciali</th>
+            <th scope="col">Anelli</th>
         </tr>
         <tr>
-            <td>Torino</td>
-            <td>Roma</td>
+            <th rowspan="2" scope="rowgroup">Torino</th>
+            <th scope="row">Roma</th>
             <td>56</td>
             <td>22</td>
             <td>72</td>
             <td>23</td>
         </tr>
         <tr>
-            <td></td>
-            <td>Vittori</td>
+            <th scope="row">Vittorio</th>
             <td>46</td>
             <td>18</td>
             <td>61</td>
             <td>12</td>
         </tr>
         <tr>
-            <td>Milano</td>
-            <td>Duomo</td>
+            <th rowspan="2" scope="rowgroup">Milano</th>
+            <th scope="row">Duomo</th>
             <td>89</td>
             <td>34</td>
             <td>85</td>
             <td>38</td>
         </tr>
         <tr>
-            <td></td>
-            <td>Navigli</td>
+            <th scope="row">Navigli</th>
             <td>80</td>
             <td>12</td>
             <td>36</td>
