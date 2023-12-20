@@ -15,12 +15,56 @@
     </ul>
     
     <h2>Form di autenticazione</h2>
-    <form action="" method=""><!--non si usa mai il get, non è sicuro-->
+    <form action="" method=""><!--non si usa mai il method get, non è sicuro-->
         <label for="usr">User</label><br>
         <input type="text" name="user" id="usr"><br>
         <label for="pswd">Password</label><br>
         <input type="password" name="password" id="pswd"><br>
-        <input type="submit" value="Login">
+        <!-- <input type="submit" value="Login"> alternativa-->
+        <button type="submit">Login</button><!--submit per invio dati-->
+    </form>
+    <h2>Form di Registrazione</h2>
+    
+    <form action="">
+        <label for="firstname">Nome</label><br>
+        <input type="text" name="firstname" id="firstname"><br>
+        <label for="lastname">Cognome</label><br>
+        <input type="text" name="lastname" id="lastname"><br>
+
+        <!-- Radio Button -->
+        <label for="male"><input type="radio" name="gender" id="male">M</label>
+        <label for="female"><input type="radio" name="gender" id="female">F</label>
+        <label for="other"><input type="radio" name="gender" id="other">Altro</label><br>
+
+        <!-- DateBox -->
+        <label for="birthdate">Data di Nascita</label><br>
+        <input type="date" name="birthdate" id="birthdate"><br>
+
+        <p>Linguaggi Conosciuti</p>
+
+        <!-- checkbox -->
+        <label for="java"><input type="checkbox" name="language" id="java">Java</label><br>
+        <label for="php"><input type="checkbox" name="language" id="php">PHP</label><br>
+        <label for="python"><input type="checkbox" name="language" id="python">Python</label><br>
+        <label for="cpluscplus"><input type="checkbox" name="language" id="cpluscplus">C++</label><br><br>
+
+        <!-- Email -->
+        <label for="email">Indirizzo email</label><br>
+        <input type="email" name="email" id="email"><br>
+
+        <!-- url -->
+        <label for="url">Sito Web</label><br>
+        <input type="url" name="url" id="url"><br><br>
+
+        <!-- Upload Files -->
+        <label for="cv">CV in formato PDF</label><br>
+        <input type="file" name="cv" id="cv"><br>
+
+        <!-- reset form button -->
+        <br><input type="reset" value="Reset">
+
+        <!-- Submit Button -->
+        <button type="submit">Registrati</button>
     </form>
 </body>
 </html>
