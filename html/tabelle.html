@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelle HTML</title>
+    <style> /* classi si richiamano con il punto*/
+        .batman{
+            background-color: cornflowerblue;
+        }
+        .flash{
+            background-color: chocolate;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hyper Text Markup Language</h1> <!-- usare sempre un solo h1-->
+    <h2>Tabelle</h2>
+    <ul>
+        <li><a href="./index3.html">Home</a></li>
+        <li><a href="./liste.html">Liste</a></li>
+        <li><span>Tabelle</span></li>
+    </ul>
+
+    <table>
+        <caption>L'HTML nel tempo</caption>
+        <thead>
+            <tr>
+                <th scope="col">Versione</th>
+                <th scope="col">Anno</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><!--table row-->
+                <td>HTML</td><!--table data-->
+                <td>1991</td>
+            </tr>
+            <tr><!--table row-->
+                <td>HTML2.0</td><!--table data-->
+                <td>1995</td>
+            </tr>
+            <tr><!--table row-->
+                <td>HTML3.2</td><!--table data-->
+                <td>1997</td>
+            </tr>
+            <tr><!--table row-->
+                <td>HTML4</td><!--table data-->
+                <td>1999</td>
+            </tr>
+            <tr><!--table row-->
+                <td>XHTML</td><!--table data-->
+                <td>1999</td>
+            </tr>
+            <tr><!--table row-->
+                <td>HTML5</td><!--table data-->
+                <td>2014</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3>Tabella con molte intestazioni</h3>
+    <table>
+        <caption>Grandi campioni del calcio</caption>
+        <tr>
+            <th scope="col">Player</th>
+            <th scope="col">Presenze</th>
+            <th scope="col">Goal</th>
+        </tr>
+        <tr>
+            <th scope="row">Messi</th>
+            <td>914</td>
+            <td>723</td>
+        </tr>
+        <tr>
+            <th scope="row">CR7</th>
+            <td>1023</td>
+            <td>748</td>
+        </tr>
+        <tr>
+            <th scope="row">Maradona</th>
+            <td>588</td>
+            <td>312</td>
+        </tr>
+    </table>
+
+    <h3>Uso di <code>&lt;colgroup&gt;</code></h3><!--consente di ragruppare colonne di una tabella-->
+
+    <div>
+        <table>
+            <caption>Supereroi e loro aiutanti</caption>
+            <!-- colgroup inserito dopo table o caption -->
+            <colgroup>
+                <col>
+                <col span="2" class="batman"><!--quante colonne ragruppare in span-->
+                <col span="2" class="flash">
+            </colgroup>
+            <tr>
+                <td></td>
+                <th scope="col">Batman</th>
+                <th scope="col">Robin</th>
+                <th scope="col">Flash</th>
+                <th scope="col">Kid Flash</th>
+            </tr>
+            <tr>
+                <th scope="row">Skills</th>
+                <td>Intelligenza</td>
+                <td>Agilità</td>
+                <td>Supervelocità</td>
+                <td>Supervelocità</td>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+        </table>
+    </div>
+
+    <!-- seleziono, ctrl+ship+p, poi wrap e poi elemento con cui wrappare -->
+    <h3>Uso degli attributi <code>rowspan</code> e <code>colspan</code></h3>
+    <!-- table>caption{articoli venduti nel 2016}+tr*6>td*6{testo} -->
+    <table>
+        <caption>Articoli venduti nel 2016</caption>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Vestiti</td>
+            <td></td>
+            <td>Accessori</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Pantaloni</td>
+            <td>Gonne</td>
+            <td>Bracciali</td>
+            <td>Anelli</td>
+        </tr>
+        <tr>
+            <td>Torino</td>
+            <td>Roma</td>
+            <td>56</td>
+            <td>22</td>
+            <td>72</td>
+            <td>23</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Vittori</td>
+            <td>46</td>
+            <td>18</td>
+            <td>61</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>Milano</td>
+            <td>Duomo</td>
+            <td>89</td>
+            <td>34</td>
+            <td>85</td>
+            <td>38</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Navigli</td>
+            <td>80</td>
+            <td>12</td>
+            <td>36</td>
+            <td>19</td>
+        </tr>
+    </table>
+
+
+</body>
+</html>
