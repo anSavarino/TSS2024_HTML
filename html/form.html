@@ -12,10 +12,11 @@
         <li><a href="./liste.html">Liste</a></li>
         <li><a href="./tabelle.html">Tabelle</a></li>
         <li><span>Form</span></li>
+        <li><a href="./iframe.html">iFrame</a></li>
     </ul>
     
     <h2>Form di autenticazione</h2>
-    <form action="" method=""><!--non si usa mai il method get, non è sicuro-->
+    <form action="" method="post"><!--non si usa mai il method get i dati vengono mandati in chiaro-->
         <label for="usr">User</label><br>
         <input type="text" name="user" id="usr"><br>
         <label for="pswd">Password</label><br>
@@ -24,29 +25,85 @@
         <button type="submit">Login</button><!--submit per invio dati-->
     </form>
     <h2>Form di Registrazione</h2>
-    
-    <form action="">
-        <label for="firstname">Nome</label><br>
-        <input type="text" name="firstname" id="firstname"><br>
-        <label for="lastname">Cognome</label><br>
-        <input type="text" name="lastname" id="lastname"><br>
-
-        <!-- Radio Button -->
-        <label for="male"><input type="radio" name="gender" id="male">M</label>
-        <label for="female"><input type="radio" name="gender" id="female">F</label>
-        <label for="other"><input type="radio" name="gender" id="other">Altro</label><br>
+    <!-- attr "required" obbliga l'utente a inserire un valore per quel campo-->
+    <p>I campi contrassegnati con * sono obbligatori.</p>
+    <!-- informarsi su enctype -->
+    <!-- size decide righe o colonne -->
+    <form action="handler.php" method="post" enctype="multipart/form-data"><!--action è il percorso del file a cui mandare i dati del form-->
+        <!-- fieldset raggruppa degli input -->
+        <fieldset>
+            <legend>Anagrafica</legend>
+            <label for="firstname">Nome*</label><br>
+            <!-- con autofocus il cursore va subito in quel campo -->
+            <input type="text" name="firstname" id="firstname" value="Mario" maxlength="10" size="30" autofocus><br><!--value è il valore di default-->
+            <label for="lastname">Cognome</label><br>
+            <!-- readonly valore value di sola lettura -->
+            <input type="text" name="lastname" id="lastname" readonly value="Savarino"><br>
+            <!-- input nascosto all'utente, id univoco per quell'utente -->
+            <input type="hidden" name="iduser" value="123">
+            <fieldset>
+                <legend>Genere</legend>
+                <!-- Radio Button -->
+                <label for="male"><input type="radio" name="gender" id="male">M</label>
+                <label for="female"><input type="radio" name="gender" id="female">F</label>
+                <label for="other"><input type="radio" name="gender" id="other">Altro</label><br>
+            </fieldset>
+        </fieldset>
 
         <!-- DateBox -->
         <label for="birthdate">Data di Nascita</label><br>
-        <input type="date" name="birthdate" id="birthdate"><br>
+        <!-- min max indicano il range -->
+        <input type="date" name="birthdate" id="birthdate" min="2023-01-01" max="2023-12-31"><br>
+        <label for="age">Inserisci la tua età</label><br>
+        <input type="number" name="age" id="age" min="18" max="30"><br>
+        <label for="ora">Ora</label><br>
+        <!-- disabled disattiva il campo e non invia il dato -->
+        <input type="time" name="ora" id="ora" disabled><br>
 
-        <p>Linguaggi Conosciuti</p>
+        <!-- Menù a tendina -->
+        <label for="city">Città</label><br>
+        <select name="city" id="city">
+            <option value="">--Scegli la città--</option>
+            <optgroup label="Città con la T">
+                <option value="Torino">Torino</option>
+                <option value="Trapani">Treviso</option>
+            </optgroup>
+            <optgroup label="Città in Sicilia">
+                <option value="Palermo">Palermo</option>
+                <option value="Salemi">Salemi</option>
+            </optgroup>
+        </select><br>
+        
+        
+        <br><label for="car">Veicoli</label><br>
+        <select name="car" id="car" multiple size="9">
+            <optgroup label="FIAT">
+                <option value="punto">Punto</option>
+                <option value="panda">Panda</option>
+            </optgroup>
+            <optgroup label="BMW">
+                <option value="m3">M3</option>
+                <option value="m2">M2</option>
+            </optgroup>
+            <optgroup label="Peugeot">
+                <option value="208">208</option>
+                <option value="308">308</option>
+            </optgroup>
+        </select><br>
+        <!-- small per inserire descrizione a oggetto precendente -->
+        <small>Per selezionare più elementi tenere premuto <kbd>CTRL</kbd></small>
 
-        <!-- checkbox -->
-        <label for="java"><input type="checkbox" name="language" id="java">Java</label><br>
-        <label for="php"><input type="checkbox" name="language" id="php">PHP</label><br>
-        <label for="python"><input type="checkbox" name="language" id="python">Python</label><br>
-        <label for="cpluscplus"><input type="checkbox" name="language" id="cpluscplus">C++</label><br><br>
+        <fieldset>
+            <legend>Linguaggi Conosciuti</legend>
+            <label for="java"><input type="checkbox" name="language" id="java">Java</label>
+            <label for="level">Livello di conoscenza</label>
+            <input type="range" name="level" id="level" min="10" max="50" value="10" step="10"><br>
+            <!-- checkbox -->
+            <!-- <label for="java"><input type="checkbox" name="language" id="java">Java</label><br> -->
+            <label for="php"><input type="checkbox" name="language" id="php">PHP</label><br>
+            <label for="python"><input type="checkbox" name="language" id="python">Python</label><br>
+            <label for="cpluscplus"><input type="checkbox" name="language" id="cpluscplus">C++</label><br><br>
+        </fieldset>
 
         <!-- Email -->
         <label for="email">Indirizzo email</label><br>
@@ -54,17 +111,32 @@
 
         <!-- url -->
         <label for="url">Sito Web</label><br>
-        <input type="url" name="url" id="url"><br><br>
+        <input type="url" name="url" id="url" placeholder="https://www.tuosito.com"><br><br>
 
         <!-- Upload Files -->
         <label for="cv">CV in formato PDF</label><br>
         <input type="file" name="cv" id="cv"><br>
+
+        <!-- Text Area, si comporta come il pre -->
+        <label for="message">Lascia un messaggio</label><br>
+        <textarea name="message" id="message" cols="50" rows="4" maxlength="150" placeholder="Scrivi qui..."></textarea><br>
+
+        <label for="informative">Informativa</label><br>
+        <textarea name="informative" id="informative" cols="50" rows="4" maxlength="150" readonly>Infromativa da leggere:
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Et doloribus impedit cum fugiat labore molestias repellendus numquam quae alias similique eaque quaerat, reiciendis autem vero inventore, ex atque quisquam excepturi!</textarea><br>
 
         <!-- reset form button -->
         <br><input type="reset" value="Reset">
 
         <!-- Submit Button -->
         <button type="submit">Registrati</button>
+    </form>
+
+    <h2>Form di ricerca</h2>
+    <form action="">
+        <label for="cerca">Inserisci il termine da cercare</label><br>
+        <input type="search" name="cerca" id="cerca"><br>
+        <button type="submit">Cerca</button>
     </form>
 </body>
 </html>
