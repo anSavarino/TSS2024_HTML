@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Angelo Savarino">
+    <meta name="description" content="Pagina sui video e immagini in thml">
+    <title>Video e audio in HTML</title>
+    <style>
+        h1{
+            color: rgb(125, 240, 78);
+            color: #ffffff;
+            color: hsl(120, 50, 50);
+            color: rgba(255, 0, 0, 0.5);
+            color: hsla(120, 50%, 50%, 0.5);
+            color: #ffffff00;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>I video</h1>
+    <!-- controls mostra i controlli autoplay  muted-->
+    <video width="600" height="400" controls>
+        <source src="./assets/media/earth.mp4" type="video/mp4">
+        <source src="./assets/media/earth.webm" type="video/webm">
+        Il tuo browser non supporta l'elemento video.
+    </video><br>
+
+    <button onclick="creaF()" type="button">Crea arco</button><br>
+    <canvas id="disegno" width="400" height="100">
+        Spiacente non supporto i canvas di HTML5 </canvas>
+    <script>
+        function creaF() {
+            var disegno = document.getElementById('disegno');
+            var context = disegno.getContext('2d');
+            context.arc(100, 100, 50, 0, Math.PI, true);
+            context.lineWidth = 5;
+            context.strokeStyle = "rgba(0,0,255,1)";
+            context.stroke();
+            context.fillStyle = "rgba(255,255,0,1)";
+            context.fill();
+        }  
+    </script>
+</body>
+
+</html>
