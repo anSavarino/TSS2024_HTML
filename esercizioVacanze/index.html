@@ -40,34 +40,33 @@
         </fieldset>
         <fieldset>
             <legend>Competenze</legend>
-            <label for="lang">Scegli il linguaggio preferito*</label><br>
-            <select name="language" id="language">
+            <label for="language">Scegli il linguaggio preferito*</label><br>
+            <select name="language" id="language" required>
                 <option value="">--Seleziona</option>
                 <option value="java">Java</option>
                 <option value="python">Python</option>
                 <option value="cplusplus">C++</option>
-
             </select><br>
             <label for="grade">Indica da 1 a 10 il grado di conoscenza del linguaggio scelto*</label><br>
-            <input type="number" name="grade" id="grade" min="1" max="10"><br>
+            <input type="number" name="grade" id="grade" min="1" max="10" required><br>
             <small>Puoi inserire valori da 1 a 10</small>
             <fieldset>
                 <legend>Framework e librerie conosciuti</legend>
                 <label for="symphony"><input type="checkbox" name="language" id="symphony">Symphony</label>
-                <label for="level">Livello</label>
-                <input type="range" name="level" id="level" min="1" max="10" value="1" step="1"><br>
+                <label for="level1">Livello</label>
+                <input type="range" name="level1" id="level1" min="1" max="10" value="1" step="1"><br>
                 <label for="jquery"><input type="checkbox" name="language" id="jquery">JQuery</label>
-                <label for="level">Livello</label>
-                <input type="range" name="level" id="level" min="1" max="10" value="1" step="1"><br>
+                <label for="level2">Livello</label>
+                <input type="range" name="level2" id="level2" min="1" max="10" value="1" step="1"><br>
                 <label for="react"><input type="checkbox" name="language" id="react">React</label>
-                <label for="level">Livello</label>
-                <input type="range" name="level" id="level" min="1" max="10" value="1" step="1"><br>
+                <label for="level3">Livello</label>
+                <input type="range" name="level3" id="level3" min="1" max="10" value="1" step="1"><br>
                 <label for="bootstrap"><input type="checkbox" name="language" id="bootstrap">Bootstrap</label>
-                <label for="level">Livello</label>
-                <input type="range" name="level" id="level" min="1" max="10" value="1" step="1"><br>
+                <label for="level4">Livello</label>
+                <input type="range" name="level4" id="level4" min="1" max="10" value="1" step="1"><br>
                 <label for="angular"><input type="checkbox" name="language" id="angular">Angular</label>
-                <label for="level">Livello</label>
-                <input type="range" name="level" id="level" min="1" max="10" value="1" step="1"><br>
+                <label for="level5">Livello</label>
+                <input type="range" name="level5" id="level5" min="1" max="10" value="1" step="1"><br>
                 <small>Puoi inserire valori da 1 a 10</small>
             </fieldset>
             <label for="cv">Curriculum*</label><br>
