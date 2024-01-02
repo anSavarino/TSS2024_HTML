@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulo di richiesta candidatura</title>
+    <style>
+        textarea{
+            width: 100%; 
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Candidati!</h1>
+    <p>Compila il modulo seguente per collabborare con noi.</p>
+    <h2>Modulo di compilazione</h2>
+    <p>I campi contrassegnati con * sono obbligatori</p>
+    <form action="" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Dati Anagrafici</legend>
+            <label for="firstname">Nome*</label><br>
+            <input type="text" name="firstname" id="firstname" placeholder="inserisci il tuo nome" required><br>
+            <label for="lastname">Cognome*</label><br>
+            <input type="text" name="lastname" id="lastname" placeholder="inserisci il tuo cognome" required><br>
+            <label for="birthdate">Data di nascita*</label><br>
+            <input type="date" name="birthdate" id="birthdate" required><br>
+            <label for="male"><input type="radio" name="gender" id="male">M</label>
+            <label for="female"><input type="radio" name="gender" id="female">F</label>
+            <label for="other"><input type="radio" name="gender" id="other">Non Binary</label><br>
+        </fieldset>
+        <fieldset>
+            <legend>Informazioni</legend>
+            <label for="email">Email*</label><br>
+            <input type="email" name="email" id="email" placeholder="inserisci un email valida" size="40" required><br>
+            <label for="website">Sito web</label><br>
+            <input type="url" name="website" id="website" placeholder="inserisci un sito web se ce l'hai" size="40"><br>
+            <label for="phonenumber">Telefono</label><br>
+            <input type="tel" name="phonenumber" id="phonenumber" placeholder="inserisci il tuo numero di telefono" size="40">
+        </fieldset>
+        <fieldset>
+            <legend>Competenze</legend>
+            <label for="lang">Scegli il linguaggio preferito*</label><br>
+            <select name="language" id="language">
+                <option value="">--Seleziona</option>
+                <option value="java">Java</option>
+                <option value="python">Python</option>
+                <option value="cplusplus">C++</option>
+
+            </select><br>
+            <label for="grade">Indica da 1 a 10 il grado di conoscenza del linguaggio scelto*</label><br>
+            <input type="number" name="grade" id="grade" min="1" max="10"><br>
+            <small>Puoi inserire valori da 1 a 10</small>
+            <fieldset>
+                <legend>Framework e librerie conosciuti</legend>
+                <label for="symphony"><input type="checkbox" name="language" id="symphony">Symphony</label>
+                <label for="level">Livello</label>
+                <input type="range" name="level" id="level" min="1" max="10" value="1" step="1"><br>
+                <label for="jquery"><input type="checkbox" name="language" id="jquery">JQuery</label>
+                <label for="level">Livello</label>
+                <input type="range" name="level" id="level" min="1" max="10" value="1" step="1"><br>
+                <label for="react"><input type="checkbox" name="language" id="react">React</label>
+                <label for="level">Livello</label>
+                <input type="range" name="level" id="level" min="1" max="10" value="1" step="1"><br>
+                <label for="bootstrap"><input type="checkbox" name="language" id="bootstrap">Bootstrap</label>
+                <label for="level">Livello</label>
+                <input type="range" name="level" id="level" min="1" max="10" value="1" step="1"><br>
+                <label for="angular"><input type="checkbox" name="language" id="angular">Angular</label>
+                <label for="level">Livello</label>
+                <input type="range" name="level" id="level" min="1" max="10" value="1" step="1"><br>
+                <small>Puoi inserire valori da 1 a 10</small>
+            </fieldset>
+            <label for="cv">Curriculum*</label><br>
+            <input type="file" name="cv" id="cv" required><br>
+            <label for="description">Raccontati in poche righe*</label><br>
+            <textarea class="textarea" name="description" id="description" rows="10" placeholder="Scrivi qui un breve testo che parli di te" required></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>Informativa sulla privacy</legend>
+            <label for="informative">Informativa</label><br>
+        <textarea name="informative" id="informative" rows="6" maxlength="150" readonly>"Termini del servizio" e "Condizioni di privacy"
+La società BLA BLA desidera informarLa che il D.Lgs. 196/2003, sostitutivo della legge 675/1996, prevede la tutela delle persone e di altri soggetti rispetto al trattamento dei dati personali. Secondo il decreto legislativo indicato, tale trattamento sarà improntato ai principi di correttezza, liceità e trasparenza e di tutela della Sua riservatezza e dei Suoi diritti."
+        </textarea><br>
+        <label for="terms"><input type="checkbox" name="terms" id="terms" required>Accetta i termini*</label>
+        </fieldset>
+        <input type="reset" value="Ripristina">
+        <button type="submit">Invia</button>
+    </form>
+    <p>Creato da: Angelo Savarino</p>
+    <a href="mailto:angelo.savarino@edu.immaginazioneelavoro.it">Contattami</a>
+</body>
+</html>
