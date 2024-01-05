@@ -16,7 +16,7 @@
     <p>Compila il modulo seguente per collabborare con noi.</p>
     <h2>Modulo di compilazione</h2>
     <p>I campi contrassegnati con * sono obbligatori</p>
-    <form action="" method="post" enctype="multipart/form-data">
+    <form action="handler.php" method="post" enctype="multipart/form-data">
         <fieldset>
             <legend>Dati Anagrafici</legend>
             <label for="firstname">Nome*</label><br>
@@ -25,9 +25,9 @@
             <input type="text" name="lastname" id="lastname" placeholder="inserisci il tuo cognome" required><br>
             <label for="birthdate">Data di nascita*</label><br>
             <input type="date" name="birthdate" id="birthdate" required><br>
-            <label for="male"><input type="radio" name="gender" id="male">M</label>
-            <label for="female"><input type="radio" name="gender" id="female">F</label>
-            <label for="other"><input type="radio" name="gender" id="other">Non Binary</label><br>
+            <label for="male"><input type="radio" name="gender" id="male" value="m">M</label>
+            <label for="female"><input type="radio" name="gender" id="female" value="f">F</label>
+            <label for="other"><input type="radio" name="gender" id="other" value="nb">Non Binary</label><br>
         </fieldset>
         <fieldset>
             <legend>Informazioni</legend>
@@ -52,25 +52,25 @@
             <small>Puoi inserire valori da 1 a 10</small>
             <fieldset>
                 <legend>Framework e librerie conosciuti</legend>
-                <label for="symphony"><input type="checkbox" name="language" id="symphony">Symphony</label>
+                <label for="symphony"><input type="checkbox" name="language" id="symphony" value="symphony">Symphony</label>
                 <label for="level1">Livello</label>
                 <input type="range" name="level1" id="level1" min="1" max="10" value="1" step="1"><br>
-                <label for="jquery"><input type="checkbox" name="language" id="jquery">JQuery</label>
+                <label for="jquery"><input type="checkbox" name="language" id="jquery" value="jquery">JQuery</label>
                 <label for="level2">Livello</label>
                 <input type="range" name="level2" id="level2" min="1" max="10" value="1" step="1"><br>
-                <label for="react"><input type="checkbox" name="language" id="react">React</label>
+                <label for="react"><input type="checkbox" name="language" id="react" value="react">React</label>
                 <label for="level3">Livello</label>
                 <input type="range" name="level3" id="level3" min="1" max="10" value="1" step="1"><br>
-                <label for="bootstrap"><input type="checkbox" name="language" id="bootstrap">Bootstrap</label>
+                <label for="bootstrap"><input type="checkbox" name="language" id="bootstrap" value="bootstrap">Bootstrap</label>
                 <label for="level4">Livello</label>
                 <input type="range" name="level4" id="level4" min="1" max="10" value="1" step="1"><br>
-                <label for="angular"><input type="checkbox" name="language" id="angular">Angular</label>
+                <label for="angular"><input type="checkbox" name="language" id="angular" value="angular">Angular</label>
                 <label for="level5">Livello</label>
                 <input type="range" name="level5" id="level5" min="1" max="10" value="1" step="1"><br>
                 <small>Puoi inserire valori da 1 a 10</small>
             </fieldset>
             <label for="cv">Curriculum*</label><br>
-            <input type="file" name="cv" id="cv" required><br>
+            <input type="file" name="cv" id="cv" accept="application/pdf"><br>
             <label for="description">Raccontati in poche righe*</label><br>
             <textarea class="textarea" name="description" id="description" rows="10" placeholder="Scrivi qui un breve testo che parli di te" required></textarea>
         </fieldset>
@@ -80,7 +80,7 @@
         <textarea name="informative" id="informative" rows="6" maxlength="150" readonly>"Termini del servizio" e "Condizioni di privacy"
 La società BLA BLA desidera informarLa che il D.Lgs. 196/2003, sostitutivo della legge 675/1996, prevede la tutela delle persone e di altri soggetti rispetto al trattamento dei dati personali. Secondo il decreto legislativo indicato, tale trattamento sarà improntato ai principi di correttezza, liceità e trasparenza e di tutela della Sua riservatezza e dei Suoi diritti."
         </textarea><br>
-        <label for="terms"><input type="checkbox" name="terms" id="terms" required>Accetta i termini*</label>
+        <label for="terms"><input type="checkbox" name="terms" id="terms" value="checked" required>Accetta i termini*</label>
         </fieldset>
         <input type="reset" value="Ripristina">
         <button type="submit">Invia</button>
