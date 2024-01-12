@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- <style>
+        h1{
+            color: red;
+        }
+    </style> -->
+</head>
+
+<body>
+    <!-- Tutte le pagine web devono avere un titolo -->
+    <header>
+        <h1>Master of CSS</h1> <!-- usare sempre un solo h1-->
+        <nav>
+            <ul>
+                <li><span>Home</span></li>
+                <li><a href="./liste.html">Liste</a></li>
+                <li><a href="./tabelle.html">Tabelle</a></li>
+                <li><a href="./form.html">Form</a></li>
+                <li><a href="./iframe.html">iFrame</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- solo un main a pagina -->
+    <main>
+        <article>
+            <h2>Indice</h2>
+            <a href="#homer">Homer</a>
+            <a href="#sez_ancora">Sezione ancora</a>
+            <h2>Elementi semplici</h2> <!-- h2{Elementi semplici} +tab-->
+            <!-- Mai saltare livelli di Heading -->
+            <!-- Nn usare il grassetto su h1 h2 h3 -->
+            <section>
+                <h3 >Paragrafi</h3>
+                <p id="my_paragraph" class="text"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos voluptate quibusdam sint
+                    itaque doloremque voluptatibus odio ipsam laborum aliquam alias provident libero aperiam non,
+                    corporis neque laboriosam magni illum unde?</p>
+                    <a target="_blank" href="https://google.com">Google</a><br>
+                    <a target="_blank" href="http://w3schools.com">W3</a>
+                    <hr>
+            </section>
+            <section>
+                <h3>Semantica del testo</h3>
+                <p class="text">Conoscere l'inglese è <strong>importante</strong></p>
+                <!-- <em> enfatizzare -->
+                <p class="text">Alzati dal letto <em>ora!</em></p>
+                <!--  <mark> evidenzia un contenuto -->
+                <p>Diverse specie di <mark>salamandra</mark> abita la foresta pliviale</p>
+                <!-- tag a scopo di presentazione i = em, b= bold (non utilizzatima non deprecati) -->
+                <p class="text">Il termine <i>web</i> specifica la <b>rete</b></p>
+            </section>
+            <section>
+                <h3>Le citazioni</h3>
+                <!-- citazione in linea, inline qunado non va a capo da solo -->
+                <p>L'azienda XYZ opera al 100% di energie rinnovabili: <q>Così proteggiamo il pianeta</q></p>
+                <!-- blockquote è un elemento di blocco citato e può avere una sua struttura
+                cite="" per riportare la fonte-->
+                <blockquote cite="https://www.apple.com">
+                    <h1>Citazione completa</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, saepe reprehenderit adipisci
+                        voluptatibus
+                        amet dolore?</p>
+                </blockquote>
+                <hr>
+            </section>
+            <section>
+                <h3>Le immagini</h3>
+                <p>Il tag &lt;img&gt; è un tag vuoto che necessita degli attributi</p>
+                <!-- Shift del layout (cercare) -->
+                <figure>
+                    <img src="./assets/img/razzo-html.jpeg"
+                        alt="razzo che vola verso lo spazio con la scritta html su sfondo nero" width="320"
+                        height="200">
+                    <figcaption>In figura un razzo che vola</figcaption>
+                </figure>
+                <hr>
+                <!-- immagine con percorso assoluto -->
+                <img src="https://images.ctfassets.net/swt2dsco9mfe/1qU2YMq2MSczf9KGme5gu7/a580e2f158f2c08faad3a9d4463af0bc/dnd-hub-logo.png"
+                    alt="logo di dnd">
+                <hr>
+                <img src="./assets/img/homer-felice.gif" id="homer" alt="Homer simpsons che salta felice">
+                <!-- pre i contenuti mantegono gli spazi che utilizzo -->
+
+                <figure>
+                    <pre>
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html&gt;
+                            &lt;head&gt;
+                            &lt;/head&gt;
+                        &lt;/html&gt;
+                    </pre>
+                    <figcaption>In figura un esempio di pagina html</figcaption>
+                </figure>
+
+                <figure>
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="-/assets/img/wave-background768.jpg">
+                        <source media="(min-width: 480px)" srcset="./assets/img/wave-background480.jpg">
+                        <source srcset="./assets/img/wave-background-small.jpg">
+                        <img src="./assets/img/wave-background-small.jpg" alt="immagine di sfondo">
+                    </picture>
+                    <figcaption>Immagine di sfondo</figcaption>
+                </figure>
+
+
+
+            </section>
+            <section>
+                <h3>Link</h3>
+                <!-- a = anchor -->
+                <p>
+                    <!-- blank apre nuova scheda -->
+                    <a href="https://www.google.com" target="_blank"
+                        title="Il link si apre in una nuova scheda/finestra">Link a
+                        Google</a><br>
+                    <a href="mailto:angelosavarino@edu.immaginazioneelavoro.it">Scrivimi</a>
+                    <a href="tel:366994455">Chiamami</a>
+                    <a href="sms:366994455">Mandami un SMS</a><br>
+                    <a href="./assets/doc/lez-I.pdf" target="_blank">Apri slide Prima Lezione</a>
+                    <!-- download scarica il file -->
+                    <a href="./assets/doc/lez-I.pdf" download="Prima Lezione HTML">Scarica slide Prima Lezione</a>
+                    <br>
+                    <!-- <a href="https://it.wikiquote.org/wiki/Proverbi_latini"><br>
+                        <img src="./assets/img/emoji-angry-fill.svg" alt="">
+                    </a><br> -->
+
+                    <hr>
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                            <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
+                          </svg>
+                    </a>
+                    <hr>
+
+
+                <h3 id="sez_ancora">Ancora nel testo</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem cum corrupti cupiditate beatae
+                    laborum
+                    fugiat.</p>
+
+            </section>
+            <footer>
+                <p>Le informazoni sono tratte dal sito mdn.com</p>
+            </footer>
+        </article>
+    </main>
+    <!-- footer si può ripetere -->
+    <footer>
+        <address>
+            <a href="mailto:angelo.savarino@edu.immaginazioneelavoro">Contattami</a>
+        </address>
+    </footer>
+</body>
+
+</html>

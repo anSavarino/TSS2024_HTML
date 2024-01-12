@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste HTML</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <h1>Hyper Text Markup Language</h1>
+    <h2>Liste</h2>
+    <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><span>Liste</span></li>
+        <li><a href="./tabelle.html">Tabelle</a></li>
+        <li><a href="./form.html">Form</a></li>
+        <li><a href="./iframe.html">iFrame</a></li>
+    </ul>
+    
+    <h2>Indice</h2>
+    <a href="#sez_ancora">Sezione ancora</a>
+    <h2>Elementi complessi</h2>
+    <h3>Liste non ordinate</h3>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <!-- ul>li*4{item$} -->
+    <ul>
+        <li>Latte</li>
+        <li>Spremuta</li>
+        <li>Caffé
+            <!-- <ul> secondo grado deve andare dentro <li> -->
+            <ul>
+                <li>caffè espresso
+                    <ul>
+                        <li>item1</li>
+                        <li>item2</li>
+                    </ul>
+                </li>
+                <li>caffè eamericano</li>
+            </ul>
+        </li>
+        <li>Amaro</li>
+    </ul>
+
+    <h3>Liste Ordinate</h3>
+    <p>Elenco dei medagliati</p>
+
+    <ol type="1" reversed> <!-- type di default 1-->
+        <li>Primo</li>
+        <li>Secondo</li>
+        <li>Terzo</li>
+    </ol>
+
+    <p class="example">Lorem, <span>ipsum dolor sit <span>amet</span> consectetur adipisicing</span> elit. Ad, vero.</p>
+    <ol start="4">
+        <li>altri</li>
+        <li>altri</li>
+        <li>altri</li>
+        <li>altri</li>
+        <li>altri</li>
+    </ol>
+
+    <h3>Liste di descrizioni</h3>
+    <p>Le criptidi</p>
+    <dl>
+        <dt>Big Foot</dt><!--Description term-->
+        <dd>Creatura leggendaria delle montagne</dd><!--Description describe-->
+        <dt>Mostro di lockness</dt>
+        <dd>Simil dinosauro del lago di lockness</dd>
+    </dl>
+
+</body>
+</html>

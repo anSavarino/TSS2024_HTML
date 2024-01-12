@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>Form HTML</title>
 </head>
 <body>
     <h1>Form HTML</h1>
     <ul>
-        <li><a href="./index3.html">Home</a></li>
+        <li><a href="./index.html">Home</a></li>
         <li><a href="./liste.html">Liste</a></li>
         <li><a href="./tabelle.html">Tabelle</a></li>
         <li><span>Form</span></li>
@@ -18,7 +19,7 @@
     <h2>Form di autenticazione</h2>
     <form action="handler.php" method="post"><!--non si usa mai il method get i dati vengono mandati in chiaro-->
         <label for="usr">User</label><br>
-        <input type="text" name="user" id="usr"><br>
+        <input type="text" name="user" id="usr" placeholder="Inserisci il tuo username"><br>
         <label for="pswd">Password</label><br>
         <input type="password" name="password" id="pswd"><br>
         <!-- <input type="submit" value="Login"> alternativa-->
