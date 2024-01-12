@@ -3,6 +3,19 @@
     margin-left: 200px; /*Non si eredita
 } */
 
+.container {
+    width: 1170px;
+    margin: auto;
+    background-color: #fff;
+    padding: 0 1rem;
+  }
+  
+  body {
+    background-color: gray;
+    margin: 0;
+  }
+  
+
 /* Selettore di elementi */
 h1 {
   color: red;
@@ -11,29 +24,29 @@ h1 {
 /* selettore di ID */
 /* box model, la dimensione che occupa è 300 + 16 (2 padding) + 2 (2 border) + 16 (2 margin)*/
 #my_paragraph {
-    color: blueviolet;
-    width: 300px;
-    padding-top: 8px;
-    padding-right: 8px;
-    padding-bottom: 8px;
-    padding-left: 8px;
-    /* padding: 8px; se il padding è uguale per tutti i lati */
-    /* padding: 8px 16px; se left e right sono diversi (stessa cosa per margin) */
-    border-top: 1px;
-    border-top-style: solid;
-    border-right: 1px;
-    border-right-style: solid;
-    border-bottom: 1px;
-    border-bottom-style: solid;
-    border-left: 1px;
-    border-left-style: solid;
-    /* border: 1px solid red; */
-    margin-top: 8px;
-    margin-right: 8px;
-    margin-bottom: 8px;
-    margin-left: 8px;
-    /* margin: 8px; se il margin è uguale per tutti i lati */
-  }
+  color: blueviolet;
+  width: 300px;
+  padding-top: 8px;
+  padding-right: 8px;
+  padding-bottom: 8px;
+  padding-left: 8px;
+  /* padding: 8px; se il padding è uguale per tutti i lati */
+  /* padding: 8px 16px; se left e right sono diversi (stessa cosa per margin) */
+  border-top: 1px;
+  border-top-style: solid;
+  border-right: 1px;
+  border-right-style: solid;
+  border-bottom: 1px;
+  border-bottom-style: solid;
+  border-left: 1px;
+  border-left-style: solid;
+  /* border: 1px solid red; */
+  margin-top: 8px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  margin-left: 8px;
+  /* margin: 8px; se il margin è uguale per tutti i lati */
+}
 
 /* specificità di selettori * (elemento o pseudo elemento)-> (attributo, calsse o pseudo classe)-> id -> style(in linea) */
 
@@ -46,8 +59,6 @@ h2,
 p {
   color: green;
 }
-
-
 
 /* selettore di classe*/
 .text {
@@ -83,21 +94,21 @@ a:active {
 
 /* formattazione liste */
 
-li:first-child{
-    color: blue;
+li:first-child {
+  color: blue;
 }
-li:last-child{
-    color: red;
+li:last-child {
+  color: red;
 }
 
 /* formattazione tabelle */
-tbody tr:nth-child(2n+1){
-    background-color: lightgray;
+tbody tr:nth-child(2n + 1) {
+  background-color: lightgray;
 }
 
 /* formattazione form */
-input:focus{
-    background-color: lightskyblue;
+input:focus {
+  background-color: lightskyblue;
 }
 
 /* selettore di Pseudo elementi (usare ::)*/
@@ -106,27 +117,27 @@ input:focus{
     font-size: 100px;
 } */
 
-p::first-letter{
-    background-color: yellow;
+p::first-letter {
+  background-color: yellow;
 }
 
-input::placeholder{
-    color: darkslateblue;
+input::placeholder {
+  color: darkslateblue;
 }
 
 /* Combinatori di selettori */
 /* + */
 h3 + p {
-    font-size: 24px;
+  font-size: 24px;
 }
 
-h3 ~ p { /*tutti i fratelli generici di h2*/
-    font-size: 24px;
+h3 ~ p {
+  /*tutti i fratelli generici di h2*/
+  font-size: 24px;
 }
 
 /* primo figlio */
-p > span{
-    font-size: 48px;
+p > span {
+  font-size: 48px;
 }
 
-/*  */
