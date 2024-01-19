@@ -1,0 +1,83 @@
+div.container {
+  width: 900px;
+  margin: auto;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4{
+    color: #1877f2;
+}
+
+section{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+blockquote.quote{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+cite{
+    font-size: 1rem;
+}
+
+#rap-music{
+    border-top: 1px solid #cdc6c6;
+}
+
+section>h2:nth-child(1)+p{ 
+    font-size: 1.3rem;
+}
+
+.index-bar{
+    list-style-type: none;
+    padding: 0px;
+}
+
+.nav-item{
+    text-decoration: none;
+    color: #222;
+}
+
+a.nav-item:visited{
+    color: #1877f2;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+caption{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+th, td{
+    padding: 1rem;
+    border: 1px solid #ddd;
+}
+
+tbody tr:nth-child(2n+1){
+    background-color: #eee;
+}
+
+footer{
+    color: #fff;
+    background-color: #1877f2;
+}
+
+footer p{
+    margin: 0px;
+    padding: 1rem;
+}
+footer a{
+    color: #eee;
+}
