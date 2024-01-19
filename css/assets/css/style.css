@@ -4,17 +4,16 @@
 } */
 
 .container {
-    width: 1170px;
-    margin: auto;
-    background-color: #fff;
-    padding: 0 1rem;
-  }
-  
-  body {
-    background-color: gray;
-    margin: 0;
-  }
-  
+  width: 1170px;
+  margin: auto;
+  background-color: #fff;
+  padding: 0 1rem;
+}
+
+body {
+  background-color: gray;
+  margin: 0;
+}
 
 /* Selettore di elementi */
 h1 {
@@ -52,6 +51,13 @@ h1 {
 
 p {
   color: red !important; /* !important sovrascrive tutte le precendenti*/
+  border-style: dashed;
+  border-width: thick;
+  border-top-style: inset;
+  border-color: red;
+  border-top-color: blue;
+  border: 9px dashed red;
+  border-radius: 20px 100px;
 }
 
 h1,
@@ -140,4 +146,3 @@ h3 ~ p {
 p > span {
   font-size: 48px;
 }
-

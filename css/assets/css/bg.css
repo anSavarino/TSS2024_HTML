@@ -1,0 +1,78 @@
+/* @font-face {
+  font-family: "Open Sans";
+  src: url("../font/OpenSans/OpenSans-Regular.woff2"),
+       url("../font/OpenSans/OpenSans-Regular.ttf");
+}
+@font-face {
+  font-family: "Open Sans bold";
+  src: url("../font/OpenSans/OpenSans-Bold.woff2"),
+       url("../font/OpenSans/OpenSans-Bold.ttf");
+} */
+
+/* body {
+  /* font-family: Arial, Helvetica, sans-serif ;
+    line-height: 147%;
+    font-size: 1.25rem;
+    font-style: italic;
+    font-weight: bold;
+    font-variant: small-caps; */
+  /* font: italic small-caps bold 100%/1.47 Arial, "Helvetica Neue", sans-serif; 
+  font-family: 'Open Sans', sans-serif;
+} */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* b, strong, .evidenzia{
+    font-family: "Open Sans bold";
+} */
+
+p.text {
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid red;
+  width: 400px;
+  /* height: 200px;
+    overflow: hidden; */
+  /* background-color: lightblue;
+    background-image: url('../img/razzo-html.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; */
+  /* background: 
+    url(../img/razzo-html.jpeg) center/50% no-repeat,
+    url('../img/clock-demo-200px.png') no-repeat lightblue; */
+}
+ul{
+    list-style-type: none;
+}
+
+ul ul{
+    /* list-style-type: square; */
+    list-style-position: outside; /*fuori content box*/
+    list-style-position: inside; /*dentro content box*/
+    /* list-style-image: url('../img/emoji-angry-fill.svg');
+    list-style: square outside url('../img/emoji-angry-fill.svg'); */
+}
+
+/* Formattazione liste con pseudo elementi */
+ul li::before{
+    content: "";
+    width: 16px;
+    height: 16px; /*h16*/
+    background-color: red;
+    display: inline-block;
+    margin-right: 8px;
+    border-radius: 50%;
+}
+ul li li::before{
+    content: "";
+    width: 16px;
+    height: 16px; /*h16*/
+    border: 1px solid red;
+    display: inline-block;
+    margin-right: 8px;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
