@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        .container{
+            width: 960px;
+            margin: auto;
+            position: relative;
+        }
+        .box{
+            width: 300px;
+            height: 300px;
+            padding: 1rem;
+            font-size: 2rem;
+            position: absolute;
+        }
+
+        .bg-1{
+            background-color: green;
+            top: 20px;
+            left: 20px;
+        }
+        .bg-2{
+            background-color: blue;
+            top: 40px;
+            left: 40px;
+        }
+        .bg-3{ 
+            background-color: orange;
+            top: 60px;
+            left: 60px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Position</h1>
+    <div class="container">
+        <div class="box bg-1">item1</div>
+        <div class="box bg-2">item2</div>
+        <div class="box bg-3">item3</div>
+    </div>
+</body>
+</html>

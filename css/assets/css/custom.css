@@ -1,0 +1,73 @@
+*, ::before, ::after{
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightgray;
+    margin: 0;
+    font: 100%/1.47 Arial, Helvetica, sans-serif;
+}
+.container {
+    width: 1170px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 0 1rem;
+}
+
+.nav-bar{
+    margin: 0;
+    padding-left: 0;
+    background-color: rgb(19, 19, 123);
+}
+.nav-bar li, .nav-bar a, .nav-bar span{
+    display: inline-block;
+}
+.nav-bar li{
+    float: left;
+}
+.nav-bar a, .nav-bar span{
+    padding: .5rem .8rem;
+}
+
+.nav-bar span, .nav-bar a:link{
+    color: white;
+    text-decoration: none;
+}
+.nav-bar a:visited{
+    color: grey;
+}
+span.active, .nav-bar a:hover{
+    background-color: white;
+    color: rgb(19, 19, 123);
+}
+
+.clearfix::after{ /*subito dopo l'elemento che floatta*/
+    content: "";
+    display: block;
+    clear: both;
+}
+
+img.img-text{
+    float: left;
+    margin-right: 1rem;
+}
+
+h1::before{
+    content: "titolo";
+    content: url('../img/emoji\ angry\ fill.svg');
+    content: "\2605";
+    color: red;
+}
+.hero{
+    position: relative;
+    height: 300px;
+    background-image: url('../img/wave-background.jpg');
+    background-size: cover;
+}
+
+.claim{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    position: absolute;
+    top: 0;
+}
