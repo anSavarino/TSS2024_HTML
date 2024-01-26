@@ -9,16 +9,34 @@
             width: 960px;
             padding: 0 1rem;
             display: grid;
-            grid-template-columns: 200px 200px 200px;
+            /* grid-template-columns: 200px 200px 200px; */
+            grid-template-columns: repeat(12, minmax(0, 1fr));
+            gap: 16px;
         }
-        .box{
+        /* .box{
             padding: 1rem;
             background-color: lightblue;
+        } */
+        header{
+            grid-column: 1 / 13;
+            grid-row: 1 / 2;
+        }
+        aside{
+            grid-column: 1 / 4;
+            grid-row: 2 / 3;
+        }
+        article{
+            grid-column: 4/13;
+            grid-row: 2 / 3;
+        }
+        footer{
+            grid-column: 1/13;
+            grid-row: 3/4;
         }
     </style>
 </head>
 <body>
-    <h1> Container Grid</h1>
+    <!-- <h1> Container Grid</h1>
     <div class="container">
         <div class="box">box_1</div>
         <div class="box">box_2</div>
@@ -27,6 +45,19 @@
         <div class="box">box_5</div>
         <div class="box">box_6</div>
         <div class="box">box_7</div>
+    </div> -->
+
+    <div class="container">
+        <header>
+            <h1>Container Grid</h1>
+        </header>
+        <aside>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, omnis fugit cumque quae quaerat voluptas corporis animi, sed recusandae magni illo eius libero qui quis ipsam a, laborum maiores possimus.</aside>
+        <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime iure molestiae facilis ducimus molestias illo est! Fugit, corrupti asperiores magni ab at aliquid laborum eaque amet cupiditate quo provident magnam?
+        Atque vitae, dolorum dolore consequuntur nemo consequatur quibusdam alias iste culpa id recusandae accusantium reiciendis ipsam est quod exercitationem officia corrupti ut! Odit eius ut sequi nam minus incidunt veritatis.
+        Rerum ex illum nam sit iste, quibusdam beatae? Accusantium alias nihil aliquid! Provident, consequuntur libero harum amet est error veritatis numquam, magni beatae quos repellendus distinctio at aliquam consequatur doloremque!
+        Ullam quam deleniti facere labore! Eius labore necessitatibus cupiditate reprehenderit nemo! Labore amet, dolore repellendus quas culpa a sunt optio aliquid perspiciatis eaque eveniet ipsam debitis unde recusandae commodi sint?
+        Amet placeat, dolorem atque nostrum, porro esse totam ex aspernatur veniam, vero culpa unde alias eligendi? Esse, suscipit hic, inventore, dolorum corporis distinctio laudantium quaerat ad aspernatur fugit maxime optio.</article>
+        <footer>Lorem ipsum dolor sit amet.</footer>
     </div>
 </body>
 </html>

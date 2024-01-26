@@ -32,7 +32,7 @@
         <!-- solo un main a pagina -->
         <main>
             <div class="row">
-                <div class="col-4">
+                <div class="col-12 col-sm-8 col-lg-9">
                     <article>
                         <h2>Indice</h2>
                         <a href="#homer">Homer</a>
@@ -40,14 +40,27 @@
                         <h2>Elementi semplici</h2> <!-- h2{Elementi semplici} +tab-->
                         <!-- Mai saltare livelli di Heading -->
                         <!-- Nn usare il grassetto su h1 h2 h3 -->
-                        <section>
-                            <h3>Paragrafi</h3>
-                            <p id="my_paragraph" class="text"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos
+                        <section id="para">
+                            <h3>Paragrafi &starf;</h3>
+                            <p class="clearfix"> <img class="img-text" src="assets/img/emoji-angry-fill.png" width="60"
+                                    height="60" alt="">Lorem ipsum dolor sit amet consectetur,
+                                adipisicing elit. Quos
                                 voluptate quibusdam sint
-                                itaque doloremque voluptatibus odio ipsam laborum aliquam alias provident libero aperiam non,
-                                corporis neque laboriosam magni illum unde?</p>
-                            <a target="_blank" href="https://google.com">Google</a><br>
-                            <a target="_blank" href="http://w3schools.com">W3</a>
+                                itaque doloremque voluptatibus odio ipsam laborum aliquam alias provident libero aperiam
+                                non,
+                                corporis neque laboriosam magni illum unde?
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, numquam enim neque
+                                eligendi
+                                aliquid magnam, nam cumque quam quia dolores fuga perferendis veritatis fugiat eum quo?
+                                Voluptatum voluptas dolore et?
+                                Et consectetur quos obcaecati quaerat earum quae. Recusandae omnis fugit reprehenderit
+                                deleniti
+                                possimus, tenetur rem debitis. Nihil accusantium dolorum facilis maiores, ipsum dicta
+                                sint
+                                molestiae porro tenetur unde fugit sapiente.
+                            </p>
+                            <a target="_blank" href="https://mdn.org">MDN</a><br>
+                            <a target="_blank" href="http://w3school.com">W3School</a>
                             <hr>
                         </section>
                         <section>
@@ -64,7 +77,7 @@
                             </blockquote>
                             <hr>
                         </section>
-                        <section>
+                        <section id="img">
                             <h3>Le immagini</h3>
                             <p>Il tag &lt;img&gt; è un tag vuoto che necessita degli attributi</p>
                             <!-- Shift del layout (cercare) -->
@@ -93,8 +106,8 @@
                             </figure>
                             <figure>
                                 <picture>
-                                    <source media="(min-width: 768px)" srcset="./assets/img/wave-background768.jpg">
-                                    <source media="(min-width: 480px)" srcset="./assets/img/wave-background480.jpg">
+                                    <source media="(min-width: 992px)" srcset="./assets/img/wave-background768.jpg">
+                                    <source media="(min-width: 576px)" srcset="./assets/img/wave-background480.jpg">
                                     <source srcset="./assets/img/wave-background-small.jpg">
                                     <img src="./assets/img/wave-background-small.jpg" alt="immagine di sfondo">
                                 </picture>
@@ -107,7 +120,7 @@
                         </footer>
                     </article>
                 </div>
-                <div class="col-4">
+                <div class="col-12 col-sm-4 col-lg-3">
                     <aside>
                         <section>
                             <h3>Link</h3>
@@ -143,18 +156,18 @@
                         </section>
                     </aside>
                 </div>
-                <div class="col-4">
+                <!-- <div class="col-4">
                     <section>
                         <h3>Semantica del testo</h3>
                         <p class="text">Conoscere l'inglese è <strong>importante</strong></p>
-                        <!-- <em> enfatizzare -->
+                         <em> enfatizzare 
                         <p class="text">Alzati dal letto <em>ora!</em></p>
-                        <!--  <mark> evidenzia un contenuto -->
+                          <mark> evidenzia un contenuto 
                         <p>Diverse specie di <mark>salamandra</mark> abita la foresta pliviale</p>
-                        <!-- tag a scopo di presentazione i = em, b= bold (non utilizzatima non deprecati) -->
+                         tag a scopo di presentazione i = em, b= bold (non utilizzatima non deprecati)
                         <p class="text">Il termine <i>web</i> specifica la <b>rete</b></p>
                     </section>
-                </div>
+                </div> -->
             </div>
         </main>
         <!-- footer si può ripetere -->
