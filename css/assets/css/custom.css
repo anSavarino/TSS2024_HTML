@@ -31,6 +31,19 @@ body {
   padding: 0 1rem;
 }
 
+.btn{
+    border: 0;
+    padding: 1rem;
+    background-color: transparent;
+}
+
+.btn-primary{
+    background-color: #ddd;
+}
+.btn-sm{
+    padding: 6px;
+}
+
 .row {
   display: flex;
   margin-left: -1rem;
