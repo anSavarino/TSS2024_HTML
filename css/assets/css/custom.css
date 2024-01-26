@@ -14,10 +14,62 @@ body {
     padding: 0 1rem;
 }
 
+/* griglia a 12 colonne */
+
+.row{
+    display: flex;
+    margin-left: -1rem;
+    margin-right: -1rem;
+}
+
+.col-1{
+    width: 8.33%;
+}
+.col-2{
+    width: 16.66%;
+}
+.col-3{
+    width: 25%;
+}
+.col-4{
+    width: 33.33%;
+}
+.col-5{
+    width: 41.66%;
+}
+.col-6{
+    width: 50%;
+}
+.col-7{
+    width: 58.33%;
+}
+.col-8{
+    width: 66.66%;
+}
+.col-9{
+    width: 75%;
+}
+.col-10{
+    width: 83.33%;
+}
+.col-11{
+    width: 91.66%;
+}
+.col-12{
+    width: 100%;
+}
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12{
+    padding: 0 1rem;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
 .nav-bar{
-    margin: 0;
-    padding-left: 0;
-    background-color: rgb(19, 19, 123);
+    margin:0;
+    padding-left:0;
+    background-color: rgb(51, 51, 154);
+    list-style-type: none;
 }
 .nav-bar li, .nav-bar a, .nav-bar span{
     display: inline-block;
@@ -25,49 +77,56 @@ body {
 .nav-bar li{
     float: left;
 }
-.nav-bar a, .nav-bar span{
-    padding: .5rem .8rem;
+.nav-bar a, .nav-bar span {
+    padding:.5rem .8rem;
 }
 
 .nav-bar span, .nav-bar a:link{
-    color: white;
+    color: #fff;
     text-decoration: none;
 }
 .nav-bar a:visited{
-    color: grey;
+    color: white;
 }
 span.active, .nav-bar a:hover{
     background-color: white;
-    color: rgb(19, 19, 123);
+    color: rgb(51, 51, 154);
 }
 
-.clearfix::after{ /*subito dopo l'elemento che floatta*/
-    content: "";
+.clearfix::after{
+    content:"";
     display: block;
     clear: both;
 }
 
 img.img-text{
-    float: left;
+    float:left;
     margin-right: 1rem;
 }
 
 h1::before{
     content: "titolo";
-    content: url('../img/emoji\ angry\ fill.svg');
+    content: url('../img/emoji-angry-fill.svg');
     content: "\2605";
     color: red;
 }
+
 .hero{
     position: relative;
     height: 300px;
-    background-image: url('../img/wave-background.jpg');
+    background-image: url(../img/wave-background.jpg);
     background-size: cover;
 }
 
 .claim{
     padding-top: 2rem;
     padding-bottom: 2rem;
-    position: absolute;
+    position:absolute;
     top: 0;
+}
+
+nav{
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
