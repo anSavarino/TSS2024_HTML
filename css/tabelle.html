@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
     <title>Tabelle HTML</title>
     <!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
-    <style> /* classi si richiamano con il punto*/
+    <!-- <style> /* classi si richiamano con il punto*/
         .batman{
             background-color: cornflowerblue;
         }
@@ -15,155 +17,187 @@
         table{
             border-collapse: collapse;
         }
-    </style>
+    </style> -->
 </head>
+
 <body>
-    <h1>Hyper Text Markup Language</h1> <!-- usare sempre un solo h1-->
-    <h2>Tabelle</h2>
-    <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./liste.html">Liste</a></li>
-        <li><span>Tabelle</span></li>
-        <li><a href="./form.html">Form</a></li>
-        <li><a href="./iframe.html">iFrame</a></li>
-    </ul>
+    <div class="container">
+        <h1 class="visually-hidden">Hyper Text Markup Language</h1> <!-- usare sempre un solo h1-->
+        <!-- <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./liste.html">Liste</a></li>
+            <li><span>Tabelle</span></li>
+            <li><a href="./form.html">Form</a></li>
+            <li><a href="./iframe.html">iFrame</a></li>
+        </ul> -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="./assets/img/HTML5_logo.svg" alt="logo di html5" width="30" height="24"
+                        class="d-inline-block align-text-top">
+                    HTML5</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./liste.html">Liste</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page">Tabelle</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./form.html">Form</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./iframe.html">iFrame</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
-    <table>
-        <caption>L'HTML nel tempo</caption>
-        <thead>
+        <h2 class="mb-3 mt-5">Tabelle</h2>
+        <table class="table mt-3 table-hover">
+            <caption>L'HTML nel tempo</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Versione</th>
+                    <th scope="col">Anno</th>
+                </tr>
+            </thead>
+            <tbody class="table-striped">
+                <tr><!--table row-->
+                    <td>HTML</td><!--table data-->
+                    <td>1991</td>
+                </tr>
+                <tr><!--table row-->
+                    <td>HTML2.0</td><!--table data-->
+                    <td>1995</td>
+                </tr>
+                <tr><!--table row-->
+                    <td>HTML3.2</td><!--table data-->
+                    <td>1997</td>
+                </tr>
+                <tr><!--table row-->
+                    <td>HTML4</td><!--table data-->
+                    <td>1999</td>
+                </tr>
+                <tr><!--table row-->
+                    <td>XHTML</td><!--table data-->
+                    <td>1999</td>
+                </tr>
+                <tr><!--table row-->
+                    <td>HTML5</td><!--table data-->
+                    <td>2014</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Tabella con molte intestazioni</h3>
+        <table class="table mt-3 table-hover">
+            <caption>Grandi campioni del calcio</caption>
             <tr>
-                <th scope="col">Versione</th>
-                <th scope="col">Anno</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr><!--table row-->
-                <td>HTML</td><!--table data-->
-                <td>1991</td>
-            </tr>
-            <tr><!--table row-->
-                <td>HTML2.0</td><!--table data-->
-                <td>1995</td>
-            </tr>
-            <tr><!--table row-->
-                <td>HTML3.2</td><!--table data-->
-                <td>1997</td>
-            </tr>
-            <tr><!--table row-->
-                <td>HTML4</td><!--table data-->
-                <td>1999</td>
-            </tr>
-            <tr><!--table row-->
-                <td>XHTML</td><!--table data-->
-                <td>1999</td>
-            </tr>
-            <tr><!--table row-->
-                <td>HTML5</td><!--table data-->
-                <td>2014</td>
-            </tr>
-        </tbody>
-    </table>
-    <h3>Tabella con molte intestazioni</h3>
-    <table>
-        <caption>Grandi campioni del calcio</caption>
-        <tr>
-            <th scope="col">Player</th>
-            <th scope="col">Presenze</th>
-            <th scope="col">Goal</th>
-        </tr>
-        <tr>
-            <th scope="row">Messi</th>
-            <td>914</td>
-            <td>723</td>
-        </tr>
-        <tr>
-            <th scope="row">CR7</th>
-            <td>1023</td>
-            <td>748</td>
-        </tr>
-        <tr>
-            <th scope="row">Maradona</th>
-            <td>588</td>
-            <td>312</td>
-        </tr>
-    </table>
-
-    <h3>Uso di <code>&lt;colgroup&gt;</code></h3><!--consente di ragruppare colonne di una tabella-->
-
-    <div>
-        <table>
-            <caption>Supereroi e loro aiutanti</caption>
-            <!-- colgroup inserito dopo table o caption -->
-            <colgroup>
-                <col>
-                <col span="2" class="batman"><!--quante colonne ragruppare in span-->
-                <col span="2" class="flash">
-            </colgroup>
-            <tr>
-                <td></td>
-                <th scope="col">Batman</th>
-                <th scope="col">Robin</th>
-                <th scope="col">Flash</th>
-                <th scope="col">Kid Flash</th>
+                <th scope="col">Player</th>
+                <th scope="col">Presenze</th>
+                <th scope="col">Goal</th>
             </tr>
             <tr>
-                <th scope="row">Skills</th>
-                <td>Intelligenza</td>
-                <td>Agilità</td>
-                <td>Supervelocità</td>
-                <td>Supervelocità</td>
+                <th scope="row">Messi</th>
+                <td>914</td>
+                <td>723</td>
+            </tr>
+            <tr>
+                <th scope="row">CR7</th>
+                <td>1023</td>
+                <td>748</td>
+            </tr>
+            <tr>
+                <th scope="row">Maradona</th>
+                <td>588</td>
+                <td>312</td>
+            </tr>
+        </table>
+        <h3>Uso di <code>&lt;colgroup&gt;</code></h3><!--consente di ragruppare colonne di una tabella-->
+        <div>
+            <table class="table mt-3 table-hover">
+                <caption>Supereroi e loro aiutanti</caption>
+                <!-- colgroup inserito dopo table o caption -->
+                <colgroup>
+                    <col>
+                    <col span="2" class="batman"><!--quante colonne ragruppare in span-->
+                    <col span="2" class="flash">
+                </colgroup>
+                <tr>
+                    <td></td>
+                    <th scope="col">Batman</th>
+                    <th scope="col">Robin</th>
+                    <th scope="col">Flash</th>
+                    <th scope="col">Kid Flash</th>
+                </tr>
+                <tr>
+                    <th scope="row">Skills</th>
+                    <td>Intelligenza</td>
+                    <td>Agilità</td>
+                    <td>Supervelocità</td>
+                    <td>Supervelocità</td>
+                </tr>
+            </table>
+        </div>
+        <!-- seleziono, ctrl+ship+p, poi wrap e poi elemento con cui wrappare -->
+        <h3>Uso degli attributi <code>rowspan</code> e <code>colspan</code></h3>
+        <!-- table>caption{articoli venduti nel 2016}+tr*6>td*6{testo} -->
+        <table class="table"mt-3 >
+            <caption>Articoli venduti nel 2016</caption>
+            <tr>
+                <td rowspan="2" colspan="2"></td>
+                <th colspan="2" scope="colgroup">Vestiti</th> <!--uso colgroup perchè ho già colspan-->
+                <th colspan="2" scope="colgroup">Accessori</th>
+            </tr>
+            <tr>
+                <th scope="col">Pantaloni</th>
+                <th scope="col">Gonne</th>
+                <th scope="col">Bracciali</th>
+                <th scope="col">Anelli</th>
+            </tr>
+            <tr>
+                <th rowspan="2" scope="rowgroup">Torino</th>
+                <th scope="row">Roma</th>
+                <td>56</td>
+                <td>22</td>
+                <td>72</td>
+                <td>23</td>
+            </tr>
+            <tr>
+                <th scope="row">Vittorio</th>
+                <td>46</td>
+                <td>18</td>
+                <td>61</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <th rowspan="2" scope="rowgroup">Milano</th>
+                <th scope="row">Duomo</th>
+                <td>89</td>
+                <td>34</td>
+                <td>85</td>
+                <td>38</td>
+            </tr>
+            <tr>
+                <th scope="row">Navigli</th>
+                <td>80</td>
+                <td>12</td>
+                <td>36</td>
+                <td>19</td>
             </tr>
         </table>
     </div>
 
-    <!-- seleziono, ctrl+ship+p, poi wrap e poi elemento con cui wrappare -->
-    <h3>Uso degli attributi <code>rowspan</code> e <code>colspan</code></h3>
-    <!-- table>caption{articoli venduti nel 2016}+tr*6>td*6{testo} -->
-    <table>
-        <caption>Articoli venduti nel 2016</caption>
-        <tr>
-            <td rowspan="2" colspan="2"></td>
-            <th colspan="2" scope="colgroup">Vestiti</th> <!--uso colgroup perchè ho già colspan-->
-            <th colspan="2" scope="colgroup">Accessori</th>
-        </tr>
-        <tr>
-            <th scope="col">Pantaloni</th>
-            <th scope="col">Gonne</th>
-            <th scope="col">Bracciali</th>
-            <th scope="col">Anelli</th>
-        </tr>
-        <tr>
-            <th rowspan="2" scope="rowgroup">Torino</th>
-            <th scope="row">Roma</th>
-            <td>56</td>
-            <td>22</td>
-            <td>72</td>
-            <td>23</td>
-        </tr>
-        <tr>
-            <th scope="row">Vittorio</th>
-            <td>46</td>
-            <td>18</td>
-            <td>61</td>
-            <td>12</td>
-        </tr>
-        <tr>
-            <th rowspan="2" scope="rowgroup">Milano</th>
-            <th scope="row">Duomo</th>
-            <td>89</td>
-            <td>34</td>
-            <td>85</td>
-            <td>38</td>
-        </tr>
-        <tr>
-            <th scope="row">Navigli</th>
-            <td>80</td>
-            <td>12</td>
-            <td>36</td>
-            <td>19</td>
-        </tr>
-    </table>
-
-
+    <script src="./assets/js/bootstrap.bundle.js"></script>
 </body>
+
 </html>

@@ -1,69 +1,140 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
     <title>Form HTML</title>
+    <style>
+        .align-level{
+            min-width: 65px;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Form HTML</h1>
-    <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./liste.html">Liste</a></li>
-        <li><a href="./tabelle.html">Tabelle</a></li>
-        <li><span>Form</span></li>
-        <li><a href="./iframe.html">iFrame</a></li>
-    </ul>
-    
-    <h2>Form di autenticazione</h2>
-    <form action="handler.php" method="post"><!--non si usa mai il method get i dati vengono mandati in chiaro-->
-        <label for="usr">User</label><br>
-        <input type="text" name="user" id="usr" placeholder="Inserisci il tuo username"><br>
-        <label for="pswd">Password</label><br>
-        <input type="password" name="password" id="pswd"><br>
-        <!-- <input type="submit" value="Login"> alternativa-->
-        <button type="submit">Login</button><!--submit per invio dati-->
-    </form>
-    <h2>Form di Registrazione</h2>
-    <!-- attr "required" obbliga l'utente a inserire un valore per quel campo-->
-    <p>I campi contrassegnati con * sono obbligatori.</p>
-    <!-- informarsi su enctype -->
-    <!-- size decide righe o colonne -->
-    <form action="handler.php" method="post" enctype="multipart/form-data"><!--action è il percorso del file a cui mandare i dati del form-->
-        <!-- fieldset raggruppa degli input -->
-        <fieldset>
-            <legend>Anagrafica</legend>
-            <label for="firstname">Nome*</label><br>
-            <!-- con autofocus il cursore va subito in quel campo -->
-            <input type="text" name="firstname" id="firstname" value="Mario" maxlength="10" size="30" autofocus><br><!--value è il valore di default-->
-            <label for="lastname">Cognome</label><br>
-            <!-- readonly valore value di sola lettura -->
-            <input type="text" name="lastname" id="lastname" readonly value="Savarino"><br>
-            <!-- input nascosto all'utente, id univoco per quell'utente -->
-            <input type="hidden" name="iduser" value="123">
+    <div class="container">
+        <h1 class="visually-hidden">Form HTML</h1>
+        <!-- <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./liste.html">Liste</a></li>
+            <li><a href="./tabelle.html">Tabelle</a></li>
+            <li><span>Form</span></li>
+            <li><a href="./iframe.html">iFrame</a></li>
+        </ul> -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="./assets/img/HTML5_logo.svg" alt="logo di html5" width="30" height="24"
+                        class="d-inline-block align-text-top">
+                    HTML5</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./liste.html">Liste</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="./tabelle.html">Tabelle</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page">Form</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./iframe.html">iFrame</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- <h2>Form di autenticazione</h2>
+        <form action="handler.php" method="post"> non si usa mai il method get i dati vengono mandati in chiaro
+            <label for="usr">User</label><br>
+            <input type="text" name="user" id="usr" placeholder="Inserisci il tuo username"><br>
+            <label for="pswd">Password</label><br>
+            <input type="password" name="password" id="pswd"><br>
+            <input type="submit" value="Login"> alternativa
+            <button type="submit">Login</button>submit per invio datiì
+        </form> -->
+        <h2>Form di Registrazione</h2>
+        <!-- attr "required" obbliga l'utente a inserire un valore per quel campo-->
+        <p>I campi contrassegnati con * sono obbligatori.</p>
+        <!-- informarsi su enctype -->
+        <!-- size decide righe o colonne -->
+        <form action="handler.php" method="post" enctype="multipart/form-data">
+            <!--action è il percorso del file a cui mandare i dati del form-->
+            <!-- fieldset raggruppa degli input -->
             <fieldset>
-                <legend>Genere</legend>
-                <!-- Radio Button -->
-                <label for="male"><input type="radio" name="gender" id="male" value="M">M</label>
-                <label for="female"><input type="radio" name="gender" id="female" value="F">F</label>
-                <label for="other"><input type="radio" name="gender" id="other" value="other">Altro</label><br>
-            </fieldset>
-        </fieldset>
+                <legend>Anagrafica</legend>
+                <div class="row">
+                    <div class="mb-3 col-sm-6 col-md-4 col-xl-3">
+                        <label class="form-label" for="firstname">Nome*</label>
+                        <!-- con autofocus il cursore va subito in quel campo -->
+                        <input class="form-control" type="text" name="firstname" id="firstname" value="Mario"
+                            maxlength="10" size="30" autofocus><!--value è il valore di default-->
+                    </div>
+                    <div class="mb-3 col-sm-6 col-md-4 col-xl-3">
+                        <label class="form-label" for="lastname">Cognome</label>
+                        <!-- readonly valore value di sola lettura -->
+                        <input class="form-control" type="text" name="lastname" id="lastname" readonly value="Savarino">
+                    </div>
+                    <!-- input nascosto all'utente, id univoco per quell'utente -->
+                    <input type="hidden" name="iduser" value="123">
+                    <div class="col-md-4 col-xl-3 mb-5 mb-md-0">
+                        <fieldset>
+                            <legend>Genere</legend>
+                            <!-- Radio Button -->
+                            <div class="form-check form-check-inline">
+                                <label class="form-check-label" for="male">
+                                    <input class="form-check-input" type="radio" name="gender" id="male"
+                                        value="M">M</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <label class="form-check-label" for="female">
+                                    <input class="form-check-input" type="radio" name="gender" id="female"
+                                        value="F">F</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <label class="form-check-label" for="other">
+                                    <input class="form-check-input" type="radio" name="gender" id="other"
+                                        value="other">Altro</label>
+                            </div>
+                        </fieldset>
+                    </div>
 
-        <!-- DateBox -->
-        <label for="birthdate">Data di Nascita</label><br>
-        <!-- min max indicano il range -->
-        <input type="date" name="birthdate" id="birthdate" min="2023-01-01" max="2023-12-31"><br>
-        <label for="age">Inserisci la tua età</label><br>
-        <input type="number" name="age" id="age" min="18" max="30"><br>
-        <label for="ora">Ora</label><br>
-        <!-- disabled disattiva il campo e non invia il dato -->
-        <input type="time" name="ora" id="ora" disabled><br>
+                    </fieldset>
+                    <!-- DateBox -->
+                    <div class="mb-3 col-sm-6 col-md-4 col-xl-3">
+                        <label class="form-label" for="birthdate">Data di Nascita</label>
+                        <!-- min max indicano il range -->
+                        <input class="form-control" type="date" name="birthdate" id="birthdate" min="2023-01-01"
+                            max="2023-12-31">
+                    </div>
+                    <div class="mb-3 col-4 col-sm-3 col-md-2 col-xl-1">
+                        <label class="form-label" for="age">Inserisci la tua età</label>
+                        <input class="form-control" type="number" name="age" id="age" min="18" max="30">
+                    </div>
+                    <div class="mb-3 col-4 col-sm-3 col-md-2 col-xl-1">
+                        <label class="form-label" for="ora">Ora</label>
+                        <!-- disabled disattiva il campo e non invia il dato -->
+                        <input class="form-control" type="time" name="ora" id="ora" disabled>
+                    </div>
+                    <!-- row finisce qui -->
+                </div>
+        </div>
 
-        <!-- Menù a tendina -->
+    <!-- Menù a tendina -->
+    <div class="mb-3">
         <label for="city">Città</label><br>
-        <select name="city" id="city">
+        <select class="form-select" name="city" id="city">
             <option value="">--Scegli la città--</option>
             <optgroup label="Città con la T">
                 <option value="Torino">Torino</option>
@@ -73,11 +144,13 @@
                 <option value="Palermo">Palermo</option>
                 <option value="Salemi">Salemi</option>
             </optgroup>
-        </select><br>
-        
-        
-        <br><label for="car">Veicoli</label><br>
-        <select name="car" id="car" multiple size="9">
+        </select>
+    </div>
+
+
+    <div class="mb-3">
+        <label for="car">Veicoli</label><br>
+        <select class="form-select" name="car" id="car" multiple size="9">
             <optgroup label="FIAT">
                 <option value="punto">Punto</option>
                 <option value="panda">Panda</option>
@@ -90,55 +163,101 @@
                 <option value="208">208</option>
                 <option value="308">308</option>
             </optgroup>
-        </select><br>
-        <!-- small per inserire descrizione a oggetto precendente -->
-        <small>Per selezionare più elementi tenere premuto <kbd>CTRL</kbd></small>
+        </select>
+    </div>
+    <!-- small per inserire descrizione a oggetto precendente -->
+    <!-- <small>Per selezionare più elementi tenere premuto <kbd>CTRL</kbd></small> -->
+    <div id="selectHelp" class="form-text">Per selezionare più elementi tenere premuto <kbd>CTRL</kbd></div>
 
-        <fieldset>
-            <legend>Linguaggi Conosciuti</legend>
-            <label for="java"><input type="checkbox" name="language" id="java">Java</label>
-            <label for="level">Livello di conoscenza</label>
-            <input type="range" name="level" id="level" min="10" max="50" value="10" step="10"><br>
-            <!-- checkbox -->
-            <!-- <label for="java"><input type="checkbox" name="language" id="java">Java</label><br> -->
-            <label for="php"><input type="checkbox" name="language" id="php">PHP</label><br>
-            <label for="python"><input type="checkbox" name="language" id="python">Python</label><br>
-            <label for="cpluscplus"><input type="checkbox" name="language" id="cpluscplus">C++</label><br><br>
-        </fieldset>
+    <fieldset>
+        <legend>Linguaggi Conosciuti</legend>
 
-        <!-- Email -->
-        <label for="email">Indirizzo email</label><br>
-        <input type="email" name="email" id="email"><br>
+        <div class="col-lg-3 d-flex align-items-center">
+            <div class="form-check form-check-inline mt-4 align-level">
+                <label class="form-check-label" for="java">
+                    <input class="form-check-input" type="checkbox" name="language" id="java">Java</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <label class="form-label" for="level-java">Livello di Java</label>
+                <input class="form-range" type="range" name="level" id="level-java" min="10" max="50" value="10"
+                    step="10">
+            </div>
+        </div>
+        <!-- checkbox -->
+        <!-- <label for="java"><input class="form-check-input" type="checkbox" name="language" id="java">Java</label><br> -->
+        <div class="col-lg-3 d-flex align-items-center">
+            <div class="form-check form-check-inline mt-4 align-level">
+                <label class="form-check-label" for="php">
+                    <input class="form-check-input" type="checkbox" name="language" id="php">PHP</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <label class="form-label" for="level-php">Livello di PHP</label>
+                <input class="form-range" type="range" name="level" id="level-php" min="10" max="50" value="10" step="10">
+            </div>
+        </div>
 
-        <!-- url -->
-        <label for="url">Sito Web</label><br>
-        <input type="url" name="url" id="url" placeholder="https://www.tuosito.com"><br><br>
+        <div class="col-lg-3 d-flex align-items-center">
+            <div class="form-check form-check-inline mt-4 align-level">
+                <label class="form-check-label" for="python">
+                    <input class="form-check-input" type="checkbox" name="language" id="python">Python</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <label class="form-label" for="level-python">Livello di Python</label>
+                <input class="form-range" type="range" name="level" id="level-python" min="10" max="50" value="10" step="10">
+            </div>
+        </div>
 
-        <!-- Upload Files -->
-        <label for="cv">CV in formato PDF</label><br>
+        <div class="col-lg-3 d-flex align-items-center">
+            <div class="form-check form-check-inline mt-4 align-level">
+                <label class="form-check-label" for="cpluscplus">
+                    <input class="form-check-input" type="checkbox" name="language" id="cpluscplus">C++</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <label class="form-label" for="level-cpp">Livello di C++</label>
+                <input class="form-range" type="range" name="level" id="level-cpp" min="10" max="50" value="10" step="10">
+            </div>
+        </div>
+
+    </fieldset>
+    <!-- Email -->
+    <div class="mb-3">
+        <label class="form-label" for="email">Indirizzo email</label><br>
+        <input class="form-control" type="email" name="email" id="email"><br>
+    </div>
+    <!-- url -->
+    <div class="mb-3">
+        <label class="form-label" for="url">Sito Web</label><br>
+        <input class="form-control" type="url" name="url" id="url" placeholder="https://www.tuosito.com"><br><br>
+    </div>
+    <!-- Upload Files -->
+    <div class="mb-3">
+        <label class="form-label" for="cv">CV in formato PDF</label><br>
         <!-- con accept puoi decidere il tipo di file es. image/png, image/jpeg, .pdf, application/pdf-->
-        <input type="file" name="cv" id="cv" accept=".pdf"><br>
-
-        <!-- Text Area, si comporta come il pre -->
+        <input class="form-control" type="file" name="cv" id="cv" accept=".pdf"><br>
+    </div>
+    <!-- Text Area, si comporta come il pre -->
+    <div class="mb-3">
         <label for="message">Lascia un messaggio</label><br>
-        <textarea name="message" id="message" cols="50" rows="4" maxlength="150" placeholder="Scrivi qui..."></textarea><br>
-
+        <textarea name="message" id="message" cols="50" rows="4" maxlength="150"
+            placeholder="Scrivi qui..."></textarea><br>
         <label for="informative">Informativa</label><br>
-        <textarea name="informative" id="informative" cols="50" rows="4" maxlength="150" readonly>Infromativa da leggere:
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Et doloribus impedit cum fugiat labore molestias repellendus numquam quae alias similique eaque quaerat, reiciendis autem vero inventore, ex atque quisquam excepturi!</textarea><br>
-
-        <!-- reset form button -->
-        <br><input type="reset" value="Reset">
-
-        <!-- Submit Button -->
-        <button type="submit">Registrati</button>
+        <textarea name="informative" id="informative" cols="50" rows="4" maxlength="150"
+            readonly>Informativa da leggere:
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et doloribus impedit cum fugiat labore molestias repellendus numquam quae alias similique eaque quaerat, reiciendis autem vero inventore, ex atque quisquam excepturi!</textarea><br>
+    </div>
+    <!-- reset form button -->
+    <input class="btn btn-secondary" type="reset" value="Reset">
+    <!-- Submit Button -->
+    <button class="btn btn-primary" type="submit">Registrati</button>
     </form>
-
-    <h2>Form di ricerca</h2>
-    <form action="handler.php">
-        <label for="cerca">Inserisci il termine da cercare</label><br>
-        <input type="search" name="cerca" id="cerca"><br>
-        <button type="submit">Cerca</button>
-    </form>
+    <!-- <h2>Form di ricerca</h2>
+        <form action="handler.php">
+            <label for="cerca">Inserisci il termine da cercare</label><br>
+            <input type="search" name="cerca" id="cerca"><br>
+            <button type="submit">Cerca</button>
+        </form> -->
+    </div>
+    <script src="./assets/js/bootstrap.bundle.js"></script>
 </body>
+
 </html>
