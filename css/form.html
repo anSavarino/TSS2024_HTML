@@ -109,8 +109,8 @@
                             </div>
                         </fieldset>
                     </div>
-
-                    </fieldset>
+                
+            
                     <!-- DateBox -->
                     <div class="mb-3 col-sm-6 col-md-4 col-xl-3">
                         <label class="form-label" for="birthdate">Data di Nascita</label>
@@ -119,7 +119,7 @@
                             max="2023-12-31">
                     </div>
                     <div class="mb-3 col-4 col-sm-3 col-md-2 col-xl-1">
-                        <label class="form-label" for="age">Inserisci la tua età</label>
+                        <label class="form-label" for="age">Età</label>
                         <input class="form-control" type="number" name="age" id="age" min="18" max="30">
                     </div>
                     <div class="mb-3 col-4 col-sm-3 col-md-2 col-xl-1">
@@ -129,133 +129,134 @@
                     </div>
                     <!-- row finisce qui -->
                 </div>
+            </fieldset>
+        
+
+        <!-- Menù a tendina -->
+        <div class="mb-3">
+            <label for="city">Città</label><br>
+            <select class="form-select" name="city" id="city">
+                <option value="">--Scegli la città--</option>
+                <optgroup label="Città con la T">
+                    <option value="Torino">Torino</option>
+                    <option value="Trapani">Treviso</option>
+                </optgroup>
+                <optgroup label="Città in Sicilia">
+                    <option value="Palermo">Palermo</option>
+                    <option value="Salemi">Salemi</option>
+                </optgroup>
+            </select>
         </div>
 
-    <!-- Menù a tendina -->
-    <div class="mb-3">
-        <label for="city">Città</label><br>
-        <select class="form-select" name="city" id="city">
-            <option value="">--Scegli la città--</option>
-            <optgroup label="Città con la T">
-                <option value="Torino">Torino</option>
-                <option value="Trapani">Treviso</option>
-            </optgroup>
-            <optgroup label="Città in Sicilia">
-                <option value="Palermo">Palermo</option>
-                <option value="Salemi">Salemi</option>
-            </optgroup>
-        </select>
-    </div>
 
-
-    <div class="mb-3">
-        <label for="car">Veicoli</label><br>
-        <select class="form-select" name="car" id="car" multiple size="9">
-            <optgroup label="FIAT">
-                <option value="punto">Punto</option>
-                <option value="panda">Panda</option>
-            </optgroup>
-            <optgroup label="BMW">
-                <option value="m3">M3</option>
-                <option value="m2">M2</option>
-            </optgroup>
-            <optgroup label="Peugeot">
-                <option value="208">208</option>
-                <option value="308">308</option>
-            </optgroup>
-        </select>
-    </div>
-    <!-- small per inserire descrizione a oggetto precendente -->
-    <!-- <small>Per selezionare più elementi tenere premuto <kbd>CTRL</kbd></small> -->
-    <div id="selectHelp" class="form-text">Per selezionare più elementi tenere premuto <kbd>CTRL</kbd></div>
-
-    <fieldset>
-        <legend>Linguaggi Conosciuti</legend>
-
-        <div class="col-lg-3 d-flex align-items-center">
-            <div class="form-check form-check-inline mt-4 align-level">
-                <label class="form-check-label" for="java">
-                    <input class="form-check-input" type="checkbox" name="language" id="java">Java</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <label class="form-label" for="level-java">Livello di Java</label>
-                <input class="form-range" type="range" name="level" id="level-java" min="10" max="50" value="10"
-                    step="10">
-            </div>
+        <div class="mb-3">
+            <label for="car">Veicoli</label><br>
+            <select class="form-select" name="car" id="car" multiple size="9">
+                <optgroup label="FIAT">
+                    <option value="punto">Punto</option>
+                    <option value="panda">Panda</option>
+                </optgroup>
+                <optgroup label="BMW">
+                    <option value="m3">M3</option>
+                    <option value="m2">M2</option>
+                </optgroup>
+                <optgroup label="Peugeot">
+                    <option value="208">208</option>
+                    <option value="308">308</option>
+                </optgroup>
+            </select>
         </div>
-        <!-- checkbox -->
-        <!-- <label for="java"><input class="form-check-input" type="checkbox" name="language" id="java">Java</label><br> -->
-        <div class="col-lg-3 d-flex align-items-center">
-            <div class="form-check form-check-inline mt-4 align-level">
-                <label class="form-check-label" for="php">
-                    <input class="form-check-input" type="checkbox" name="language" id="php">PHP</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <label class="form-label" for="level-php">Livello di PHP</label>
-                <input class="form-range" type="range" name="level" id="level-php" min="10" max="50" value="10" step="10">
-            </div>
-        </div>
+        <!-- small per inserire descrizione a oggetto precendente -->
+        <!-- <small>Per selezionare più elementi tenere premuto <kbd>CTRL</kbd></small> -->
+        <div id="selectHelp" class="form-text">Per selezionare più elementi tenere premuto <kbd>CTRL</kbd></div>
 
-        <div class="col-lg-3 d-flex align-items-center">
-            <div class="form-check form-check-inline mt-4 align-level">
-                <label class="form-check-label" for="python">
-                    <input class="form-check-input" type="checkbox" name="language" id="python">Python</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <label class="form-label" for="level-python">Livello di Python</label>
-                <input class="form-range" type="range" name="level" id="level-python" min="10" max="50" value="10" step="10">
-            </div>
-        </div>
+        <fieldset>
+            <legend>Linguaggi Conosciuti</legend>
 
-        <div class="col-lg-3 d-flex align-items-center">
-            <div class="form-check form-check-inline mt-4 align-level">
-                <label class="form-check-label" for="cpluscplus">
-                    <input class="form-check-input" type="checkbox" name="language" id="cpluscplus">C++</label>
+            <div class="col-lg-3 d-flex align-items-center">
+                <div class="form-check form-check-inline mt-4 align-level">
+                    <label class="form-check-label" for="java">
+                        <input class="form-check-input" type="checkbox" name="language" id="java">Java</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <label class="form-label" for="level-java">Livello di Java</label>
+                    <input class="form-range" type="range" name="level" id="level-java" min="10" max="50" value="10"
+                        step="10">
+                </div>
             </div>
-            <div class="form-check form-check-inline">
-                <label class="form-label" for="level-cpp">Livello di C++</label>
-                <input class="form-range" type="range" name="level" id="level-cpp" min="10" max="50" value="10" step="10">
+            <!-- checkbox -->
+            <!-- <label for="java"><input class="form-check-input" type="checkbox" name="language" id="java">Java</label><br> -->
+            <div class="col-lg-3 d-flex align-items-center">
+                <div class="form-check form-check-inline mt-4 align-level">
+                    <label class="form-check-label" for="php">
+                        <input class="form-check-input" type="checkbox" name="language" id="php">PHP</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <label class="form-label" for="level-php">Livello di PHP</label>
+                    <input class="form-range" type="range" name="level" id="level-php" min="10" max="50" value="10" step="10">
+                </div>
             </div>
-        </div>
 
-    </fieldset>
-    <!-- Email -->
-    <div class="mb-3">
-        <label class="form-label" for="email">Indirizzo email</label><br>
-        <input class="form-control" type="email" name="email" id="email"><br>
-    </div>
-    <!-- url -->
-    <div class="mb-3">
-        <label class="form-label" for="url">Sito Web</label><br>
-        <input class="form-control" type="url" name="url" id="url" placeholder="https://www.tuosito.com"><br><br>
-    </div>
-    <!-- Upload Files -->
-    <div class="mb-3">
-        <label class="form-label" for="cv">CV in formato PDF</label><br>
-        <!-- con accept puoi decidere il tipo di file es. image/png, image/jpeg, .pdf, application/pdf-->
-        <input class="form-control" type="file" name="cv" id="cv" accept=".pdf"><br>
-    </div>
-    <!-- Text Area, si comporta come il pre -->
-    <div class="mb-3">
-        <label for="message">Lascia un messaggio</label><br>
-        <textarea name="message" id="message" cols="50" rows="4" maxlength="150"
-            placeholder="Scrivi qui..."></textarea><br>
-        <label for="informative">Informativa</label><br>
-        <textarea name="informative" id="informative" cols="50" rows="4" maxlength="150"
-            readonly>Informativa da leggere:
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et doloribus impedit cum fugiat labore molestias repellendus numquam quae alias similique eaque quaerat, reiciendis autem vero inventore, ex atque quisquam excepturi!</textarea><br>
-    </div>
-    <!-- reset form button -->
-    <input class="btn btn-secondary" type="reset" value="Reset">
-    <!-- Submit Button -->
-    <button class="btn btn-primary" type="submit">Registrati</button>
-    </form>
-    <!-- <h2>Form di ricerca</h2>
-        <form action="handler.php">
-            <label for="cerca">Inserisci il termine da cercare</label><br>
-            <input type="search" name="cerca" id="cerca"><br>
-            <button type="submit">Cerca</button>
-        </form> -->
+            <div class="col-lg-3 d-flex align-items-center">
+                <div class="form-check form-check-inline mt-4 align-level">
+                    <label class="form-check-label" for="python">
+                        <input class="form-check-input" type="checkbox" name="language" id="python">Python</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <label class="form-label" for="level-python">Livello di Python</label>
+                    <input class="form-range" type="range" name="level" id="level-python" min="10" max="50" value="10" step="10">
+                </div>
+            </div>
+
+            <div class="col-lg-3 d-flex align-items-center">
+                <div class="form-check form-check-inline mt-4 align-level">
+                    <label class="form-check-label" for="cpluscplus">
+                        <input class="form-check-input" type="checkbox" name="language" id="cpluscplus">C++</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <label class="form-label" for="level-cpp">Livello di C++</label>
+                    <input class="form-range" type="range" name="level" id="level-cpp" min="10" max="50" value="10" step="10">
+                </div>
+            </div>
+
+        </fieldset>
+        <!-- Email -->
+        <div class="mb-3">
+            <label class="form-label" for="email">Indirizzo email</label><br>
+            <input class="form-control" type="email" name="email" id="email"><br>
+        </div>
+        <!-- url -->
+        <div class="mb-3">
+            <label class="form-label" for="url">Sito Web</label><br>
+            <input class="form-control" type="url" name="url" id="url" placeholder="https://www.tuosito.com"><br><br>
+        </div>
+        <!-- Upload Files -->
+        <div class="mb-3">
+            <label class="form-label" for="cv">CV in formato PDF</label><br>
+            <!-- con accept puoi decidere il tipo di file es. image/png, image/jpeg, .pdf, application/pdf-->
+            <input class="form-control" type="file" name="cv" id="cv" accept=".pdf"><br>
+        </div>
+        <!-- Text Area, si comporta come il pre -->
+        <div class="mb-3">
+            <label for="message">Lascia un messaggio</label><br>
+            <textarea name="message" id="message" cols="50" rows="4" maxlength="150"
+                placeholder="Scrivi qui..."></textarea><br>
+            <label for="informative">Informativa</label><br>
+            <textarea name="informative" id="informative" cols="50" rows="4" maxlength="150"
+                readonly>Informativa da leggere:
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et doloribus impedit cum fugiat labore molestias repellendus numquam quae alias similique eaque quaerat, reiciendis autem vero inventore, ex atque quisquam excepturi!</textarea><br>
+        </div>
+        <!-- reset form button -->
+        <input class="btn btn-secondary" type="reset" value="Reset">
+        <!-- Submit Button -->
+        <button class="btn btn-primary" type="submit">Registrati</button>
+        </form>
+        <!-- <h2>Form di ricerca</h2>
+            <form action="handler.php">
+                <label for="cerca">Inserisci il termine da cercare</label><br>
+                <input type="search" name="cerca" id="cerca"><br>
+                <button type="submit">Cerca</button>
+            </form> -->
     </div>
     <script src="./assets/js/bootstrap.bundle.js"></script>
 </body>
